@@ -33,17 +33,25 @@ Create data dir and set ownership & permissions
 ```bash
 mkdir -p ./data/zookeeper &&
 mkdir -p ./data/bookkeeper &&
+sudo chown -R 10000 ./data &&
 sudo chown -R 10000:0 ./data/zookeeper &&
 sudo chown -R 10000:0 ./data/bookkeeper &&
+```
+
+Start `Pulsar` running `docker-compose up`
+
+
+In case of access errors use `chmod`:
+
+```bash
 sudo chmod -R 770 ./data/zookeeper &&
 sudo chmod -R 770 ./data/bookkeeper
 ```
 
-Start `Pulsar` running `docker-compose up` , use `chmod -R 777` in case of access errors
-
 
 ```bash
 $ pnpm install
+$ pnpm approve-builds
 ```
 
 ## Compile and run the project
