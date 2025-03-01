@@ -18,11 +18,11 @@ import { PulsarProducerService } from './pulsar-producer.service';
       inject: [ConfigService],
       provide: PULSAR_CLIENT,
       /**
-       * Factory function that creates and provides the Pulsar Client instance.
-       * This function is responsible for instantiating the Pulsar client using configuration from the ConfigService.
-       * It retrieves the Pulsar service URL from the configuration and uses it to create a new Pulsar Client.
-       * @param {ConfigService} configService - Injected ConfigService instance, used to access application configuration.
-       * @returns {Client} A new Pulsar Client instance configured with the service URL from the application configuration.
+       * Factory function that creates and provides the Pulsar `Client` instance.
+       * This function is responsible for instantiating the Pulsar client using configuration from the `ConfigService`.
+       * It retrieves the Pulsar service URL from the configuration and uses it to create a new Pulsar `Client`.
+       * @param configService - Injected `ConfigService` instance, used to access application configuration.
+       * @returns A new Pulsar `Client` instance configured with the service URL from the application configuration.
        */
       useFactory: (configService: ConfigService) =>
         new Client({
