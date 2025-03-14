@@ -35,11 +35,10 @@ mkdir -p ./data/zookeeper &&
 mkdir -p ./data/bookkeeper &&
 sudo chown -R 10000 ./data &&
 sudo chown -R 10000:0 ./data/zookeeper &&
-sudo chown -R 10000:0 ./data/bookkeeper &&
+sudo chown -R 10000:0 ./data/bookkeeper
 ```
 
 Start `Pulsar` running `docker-compose up`
-
 
 In case of access errors use `chmod`:
 
@@ -47,7 +46,6 @@ In case of access errors use `chmod`:
 sudo chmod -R 770 ./data/zookeeper &&
 sudo chmod -R 770 ./data/bookkeeper
 ```
-
 
 ```bash
 $ pnpm install
